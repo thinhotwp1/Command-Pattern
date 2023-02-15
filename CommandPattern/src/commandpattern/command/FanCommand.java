@@ -5,7 +5,6 @@
 package commandpattern.command;
 
 import commandpattern.object.Fan;
-import commandpattern.object.Light;
 
 /**
  *

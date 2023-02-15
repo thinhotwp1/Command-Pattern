@@ -1,6 +1,5 @@
 package commandpattern.command;
 
-import commandpattern.remote.RemoteControl;
 
 public class MacroCommand implements Command{
 

@@ -7,10 +7,7 @@ package commandpattern;
 
 
 import commandpattern.command.*;
-import commandpattern.object.Fan;
 import commandpattern.remote.RemoteControl;
-
-import java.sql.SQLOutput;
 
 /**
  * @author ThinhLd

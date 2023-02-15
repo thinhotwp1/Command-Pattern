@@ -6,7 +6,7 @@ package commandpattern.object;
 
 /**
  *
- * @author Administrator
+ * @author ThinhLd
  */
 public class Light {
 

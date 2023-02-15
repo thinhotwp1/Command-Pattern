@@ -7,8 +7,7 @@ package commandpattern.command;
 import commandpattern.object.Light;
 
 /**
- *
- * @author Administrator
+ * @author ThinhLd
  */
 public class LightCommand implements Command {
 
@@ -22,6 +21,15 @@ public class LightCommand implements Command {
     @Override
     public void excuteOff() {
         light.turnOff();
+    }
+
+    @Override
+    public void undo() {
+        if (light.on) {
+            light.turnOff();
+        } else {
+            light.turnOn();
+        }
     }
 
 }

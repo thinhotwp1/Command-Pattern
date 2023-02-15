@@ -9,7 +9,7 @@ import commandpattern.object.Light;
 
 /**
  *
- * @author Administrator
+ * @author ThinhLd
  */
 public class FanCommand implements Command{
     Fan fan = new Fan();
@@ -22,6 +22,15 @@ public class FanCommand implements Command{
     @Override
     public void excuteOff() {
         fan.turnOff();
+    }
+
+    @Override
+    public void undo() {
+        if (fan.on) {
+            fan.turnOff();
+        } else {
+            fan.turnOn();
+        }
     }
 
 }

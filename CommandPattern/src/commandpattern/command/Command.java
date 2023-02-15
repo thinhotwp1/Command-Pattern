@@ -6,9 +6,10 @@ package commandpattern.command;
 
 /**
  *
- * @author Administrator
+ * @author ThinhLd
  */
 public interface Command {
     public void excuteOn();
     public void excuteOff();
+    public void undo();
 }

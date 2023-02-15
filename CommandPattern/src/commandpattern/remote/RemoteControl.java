@@ -9,16 +9,16 @@ import commandpattern.command.NoCommand;
 
 /**
  *
- * @author Administrator
+ * @author ThinhLd
  */
 public class RemoteControl {
 
     public static int soLuong = 7;
-    Command[] command;
+    Command[] command = new Command[soLuong];
 
     public RemoteControl() {
         Command noCommand = new NoCommand();
-        for (int i = 1; i <= soLuong; i++) {
+        for (int i = 0; i < soLuong; i++) {
             command[i] = noCommand;
         }
     }
@@ -34,14 +34,18 @@ public class RemoteControl {
     public void buttonOffWasPress(int slot) {
         command[slot].excuteOff();
     }
+    public void buttonUndoWasPress(int slot) {
+        command[slot].undo();
+    }
 
     @Override
     public String toString() {
-        StringBuilder stringBuffer = new StringBuilder();
-        stringBuffer.append("====== Remote Control =======");
-        for(int i=1;i<=n;i++){
-            stringBuffer.append("[slot "+i+"] "+command[i].getClass().getName()+"\n");
+        StringBuffer stringBuffer = new StringBuffer();
+        stringBuffer.append("\n====== Remote Control Setup ======\n");
+        for(int i=0;i<soLuong;i++){
+            stringBuffer.append("[Slot "+i+"] "+command[i].getClass().getSimpleName()+"\n");
         }
+        stringBuffer.append("====== Remote Control Setup Sucess ======\n");
        return stringBuffer.toString();       
     }
     

@@ -7,11 +7,10 @@ package commandpattern.command;
 import commandpattern.object.GarageDoor;
 
 /**
- *
- * @author Administrator
+ * @author ThinhLd
  */
-public class GarageDoorCommand implements Command{
-    
+public class GarageDoorCommand implements Command {
+
     GarageDoor garaDoor = new GarageDoor();
 
     @Override
@@ -22,5 +21,14 @@ public class GarageDoorCommand implements Command{
     @Override
     public void excuteOff() {
         garaDoor.down();
+    }
+
+    @Override
+    public void undo() {
+        if (garaDoor.up) {
+            garaDoor.down();
+        } else {
+            garaDoor.up();
+        }
     }
 }

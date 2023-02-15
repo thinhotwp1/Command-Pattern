@@ -6,11 +6,10 @@ package commandpattern.command;
 
 /**
  *
- * @author Administrator
+ * @author ThinhLd
  */
 public class NoCommand implements Command{
-    // Lớp noCommand này được tạo ra để thay thế cho null command để không làm hành động gì và tránh lỗi xảy ra
-    
+    // Lớp noCommand này được tạo ra để thay thế cho null command để không làm hành động gì và tránh lỗi null exception xảy ra
 
     @Override
     public void excuteOn() {
@@ -19,5 +18,9 @@ public class NoCommand implements Command{
     @Override
     public void excuteOff() {
     }
-    
+
+    @Override
+    public void undo() {
+    }
+
 }
